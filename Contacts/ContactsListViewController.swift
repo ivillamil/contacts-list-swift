@@ -13,11 +13,14 @@ class ContactsListViewController: UIViewController {
     
     var contacts: Array<Contact> = [Contact]()
     var selectedIndex: Int!
+    var indicator = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
+        indicatorView()
+        showIndicator()
         fetchContacts()
     }
 
@@ -51,6 +54,7 @@ class ContactsListViewController: UIViewController {
                 }
                 
                 DispatchQueue.main.sync {
+                    self.hideIndicator()
                     self.tableView.reloadData()
                 }
                 
@@ -59,6 +63,21 @@ class ContactsListViewController: UIViewController {
             }
         }
         requestTask.resume()
+    }
+    
+    func hideIndicator() {
+        indicator.stopAnimating()
+    }
+    
+    func indicatorView() {
+        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
+        indicator.center = self.view.center
+        indicator.hidesWhenStopped = true
+        self.view.addSubview(indicator)
+    }
+    
+    func showIndicator() {
+        indicator.startAnimating()
     }
 }
 
