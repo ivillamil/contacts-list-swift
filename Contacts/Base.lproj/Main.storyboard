@@ -32,13 +32,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vqc-qN-Kgt">
-                                                    <rect key="frame" x="60" y="10" width="240" height="100"/>
+                                                    <rect key="frame" x="0.0" y="10" width="0.0" height="100"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gBg-1z-F1j">
-                                                            <rect key="frame" x="50" y="20.5" width="180" height="59.5"/>
+                                                            <rect key="frame" x="0.0" y="20.5" width="0.0" height="59.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwu-Uj-fEY" userLabel="Contact Name Label">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="28"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="28"/>
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="Label">
                                                                             <attributes>
@@ -50,11 +50,11 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bY-oF-tQl" userLabel="Separator Wrapper">
-                                                                    <rect key="frame" x="0.0" y="28" width="180" height="15"/>
+                                                                    <rect key="frame" x="0.0" y="28" width="0.0" height="15"/>
                                                                     <subviews>
-                                                                        <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1lh-T2-5nb" userLabel="Separator Line View">
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1lh-T2-5nb" userLabel="Separator Line View">
                                                                             <rect key="frame" x="0.0" y="6.5" width="20" height="2"/>
-                                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <color key="backgroundColor" red="0.81867045164108276" green="0.72904819250106812" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="20" id="Fuv-1b-duq"/>
                                                                                 <constraint firstAttribute="height" constant="2" id="sA5-lN-PFH"/>
@@ -69,7 +69,7 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtf-jD-3dd">
-                                                                    <rect key="frame" x="0.0" y="43" width="180" height="16.5"/>
+                                                                    <rect key="frame" x="0.0" y="43" width="0.0" height="16.5"/>
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="Description">
                                                                             <attributes>
@@ -83,7 +83,8 @@
                                                             </subviews>
                                                         </stackView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qsn-3H-oXb">
-                                                            <rect key="frame" x="-40" y="10" width="80" height="80"/>
+                                                            <rect key="frame" x="0.0" y="10" width="80" height="80"/>
+                                                            <color key="tintColor" red="0.3529411764705882" green="0.28627450980392155" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="80" id="Dlc-7B-UrV"/>
                                                                 <constraint firstAttribute="width" constant="80" id="bfn-EK-Svc"/>

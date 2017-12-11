@@ -19,10 +19,13 @@ class ContactTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        bodyView.layer.cornerRadius = 20
         avatarImageView.layer.cornerRadius = 40
         avatarImageView.layer.masksToBounds = true
-        separatorLineView.layer.cornerRadius = 1
+        avatarImageView.layer.borderWidth = 2.0
+        avatarImageView.layer.borderColor = UIColor(red: 90/255, green: 73/255, blue: 124/255, alpha: 1.0).cgColor
+        
+        bodyView.layer.cornerRadius = 20
+        separatorLineView.layer.cornerRadius = 2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
