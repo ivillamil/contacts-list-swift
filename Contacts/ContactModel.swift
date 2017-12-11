@@ -24,11 +24,26 @@ struct Contact {
     public let title: String
     
     public init(json: [String: Any]) throws {
+        guard let id = json["id"] as? Int else {
+            throw SerializationError.missing("id")
+        }
+        guard let address = json["address"] as? String else {
+            throw SerializationError.missing("address")
+        }
         guard let avatar = json["avatar"] as? String else {
             throw SerializationError.missing("avatar")
         }
+        guard let description = json["description"] as? String else {
+            throw SerializationError.missing("description")
+        }
+        guard let email = json["email"] as? String else {
+            throw SerializationError.missing("email")
+        }
         guard let name = json["name"] as? String else {
             throw SerializationError.missing("name")
+        }
+        guard let phone = json["phone"] as? String else {
+            throw SerializationError.missing("phone")
         }
         guard let title = json["title"] as? String else {
             throw SerializationError.missing("title")
@@ -38,14 +53,14 @@ struct Contact {
         let imageData = try? Data(contentsOf: imageURL!)
         let image = UIImage(data: imageData!)
         
-        self.id = 0
-        self.address = ""
+        self.id = id
+        self.address = address
         self.avatar = avatar
         self.avatarImage = image!
-        self.description = ""
-        self.email = ""
+        self.description = description
+        self.email = email
         self.name = name
-        self.phone = ""
+        self.phone = phone
         self.title = title
     }
 }
