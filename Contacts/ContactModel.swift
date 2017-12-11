@@ -6,7 +6,7 @@
 //  Copyright © 2017 Iván Villamil Covián. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 enum SerializationError: Error {
     case missing(String)
@@ -16,6 +16,7 @@ struct Contact {
     public let id: Int
     public let address: String
     public let avatar: String
+    public let avatarImage: UIImage
     public let description: String
     public let email: String
     public let name: String
@@ -33,9 +34,14 @@ struct Contact {
             throw SerializationError.missing("title")
         }
         
+        let imageURL = URL(string: avatar)
+        let imageData = try? Data(contentsOf: imageURL!)
+        let image = UIImage(data: imageData!)
+        
         self.id = 0
         self.address = ""
         self.avatar = avatar
+        self.avatarImage = image!
         self.description = ""
         self.email = ""
         self.name = name
